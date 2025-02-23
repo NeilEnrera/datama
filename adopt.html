@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption - Lost Dogs</title>
+    <link rel="stylesheet" href="css/adopt.css">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <header class="navbar-container">
+        <nav>
+            <div class="logo-container">
+                <img src="image/logo.png" alt="Here Pawr You Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="btn">HOME</a></li>
+                <li><a href="adopt.html" class="btn active">ADOPT</a></li> 
+                <li><a href="donation.html" class="btn">DONATE</a></li>
+                <li><a href="lost.html" class="btn">LOST</a></li>
+                <li><a href="about us.html" class="btn">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Red Separator -->
+    <div class="separator"></div>
+
+    <!-- Adopt Section -->
+    <section class="adopt-section">
+        <div class="paw-container">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+        </div>
+        
+        <div class="adopt-container">
+            <div class="categories-container">
+                <h3>Categories</h3>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="strayDogs" name="category">
+                        <label for="strayDogs">Stray Dogs</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="strayCats" name="category">
+                        <label for="strayCats">Stray Cats</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lostDogs" name="category">
+                        <label for="lostDogs">Lost Dogs</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lostCats" name="category">
+                        <label for="lostCats">Lost Cats</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pets-container" id="lostDogsContainer"></div>
+        </div>
+    </section>
+
+    <script src="script/adopt.js"></script>
+
+    <!-- Red Background at Bottom -->
+    <div class="footer-space"></div>
+</body>
+</html>

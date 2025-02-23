@@ -1,0 +1,301 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #BB2742; /* Red background */
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar-container {
+    background-color: #8DBDE3;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: rgba(187, 39, 66, 0.1);
+    color: #BB2742;
+}
+
+.btn.active {
+    background-color: #BB2742;
+    color: white;
+    font-weight: 500;
+}
+
+.btn.signup {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Main Content Styles */
+.main-content {
+    min-height: calc(100vh - 100px);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content-card {
+    background: #8DBDE3;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative; /* Important for containing the paw background */
+    overflow: hidden; /* Keep paws inside the card */
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+    z-index: 5;
+}
+
+.text-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #BB2742;
+}
+
+.join-text {
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.adopt-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #394598;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+    margin-left: 180px;
+}
+
+.adopt-btn:hover {
+    background-color: #2d3878;
+    transform: translateY(-2px);
+    z-index: 2;
+}
+
+.paw-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    z-index: 3;
+    position: relative;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 2; /* Ensure it's above paw background */
+}
+
+.image-content:hover {
+    transform: scale(1.05);
+}
+
+.image-content img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid #394598;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Add this */
+    z-index: 2; /* Add this */
+    background: white; /* Add white background to image */
+}
+
+
+/* Paw Container */
+.paw-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Update paw positions to be relative to the card */
+.paw {
+    width: 200px;
+    height: auto;
+    opacity: 0.4;
+    position: absolute;
+    filter: brightness(0.5) sepia(0.3) saturate(0.5);
+}
+
+/* Paw positions */
+.paw:nth-child(1) { top: -25%; right: 30%; width: 300px; }
+.paw:nth-child(2) { top: 15%; right: 5%; width: 300px; }
+.paw:nth-child(3) { bottom: -10%; right: 30%; width: 300px; }
+.paw:nth-child(4) { bottom: -45%; right: 5%; width: 300px; }
+.paw:nth-child(5) { bottom: 8%; right: 66%; transform: rotate(35deg); width: 65px; opacity: 1;}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    .content-card {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .text-content {
+        padding-right: 0;
+    }
+
+    .image-content {
+        order: -1;
+    }
+
+    .image-content img {
+        max-width: 350px;
+    }
+
+    .paw {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: #8DBDE3;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+
+    .image-content img {
+        max-width: 300px;
+    }
+
+    .paw {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-content h2 {
+        font-size: 20px;
+    }
+
+    .image-content img {
+        max-width: 250px;
+    }
+
+    .paw {
+        width: 120px;
+    }
+
+    .paw:nth-child(4),
+    .paw:nth-child(6) {
+        display: none;
+    }
+}

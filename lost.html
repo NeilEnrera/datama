@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost - Here Pawr You</title>
+    <link rel="stylesheet" type="text/css" href="css/lost.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <header class="navbar-container">
+        <nav>
+            <div class="logo-container">
+                <img src="image/logo.png" alt="Here Pawr You Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="btn">HOME</a></li>
+                <li><a href="adopt.html" class="btn">ADOPT</a></li>
+                <li><a href="donation.html" class="btn">DONATE</a></li>
+                <li><a href="lost.html" class="btn active">LOST</a></li>
+                <li><a href="about us.html" class="btn">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Red Separator -->
+    <div class="separator"></div>
+
+    <!-- Lost Section -->
+    <section class="lost-section">
+        <!-- Paw Background -->
+        <div class="paw-container">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+        </div>
+        
+        <!-- Lost Content Container -->
+        <div class="lost-container">
+            <h1>Lost Pets</h1>
+            
+            <!-- Missing Pets Grid Section -->
+            <div class="missing-pets-grid">
+                <!-- Posters will be generated here -->
+            </div>
+
+            <div class="content-wrapper">
+                <!-- Left Side: Report Form -->
+                <div class="report-form-container">
+                    <h2>Report Missing Pets</h2>
+                    <form id="reportForm" class="report-form">
+                        <div class="form-group">
+                            <label>Category:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="lostDog" name="category" value="Dog" required>
+                                <label for="lostDog">Lost Dog</label>
+                                <input type="radio" id="lostCat" name="category" value="Cat">
+                                <label for="lostCat">Lost Cat</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="petName">Pet's Name:</label>
+                            <input type="text" id="petName" name="petName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="petImage">Pet's Photo:</label>
+                            <input type="file" id="petImage" name="petImage" accept="image/*" required>
+                            <div id="imagePreview" class="image-preview"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastSeen">Last Seen:</label>
+                            <input type="text" id="lastSeen" name="lastSeen" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number:</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <input type="text" id="description" name="description" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Right Side: Encouraging Message -->
+                <div class="message-box">
+                    <h3>Don't Give Up Hope!</h3>
+                    <ul>
+                        <li>Don't give up many lost pets find their way home!</li>
+                        <li>Your pet is looking for you too keep searching!</li>
+                        <li>Every effort matters: post, search, and ask for help!</li>
+                        <li>Hope is powerful! Pets have been found even after months!</li>
+                        <li>Love leads the way your bond will bring them back!</li>
+                    </ul>
+                    <p class="hashtag">#BringThemHome</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red Background at Bottom -->
+    <div class="footer-space"></div>
+
+    <script src="./script/lost.js"></script>
+</body>
+</html>

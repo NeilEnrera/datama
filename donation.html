@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Here Pawr You</title>
+    <link rel="stylesheet" type="text/css" href="css/donation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <header class="navbar-container">
+        <nav>
+            <div class="logo-container">
+                <img src="image/logo.png" alt="Here Pawr You Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="btn">HOME</a></li>
+                <li><a href="adopt.html" class="btn">ADOPT</a></li>
+                <li><a href="donation.html" class="btn active">DONATE</a></li>
+                <li><a href="lost.html" class="btn">LOST</a></li>
+                <li><a href="about us.html" class="btn">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Red Separator -->
+    <div class="separator"></div>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <!-- Paw Background -->
+        <div class="paw-container">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+            <img src="image/paw.png" class="paw" alt="paw print">
+        </div>
+
+        <div class="donation-container">
+            <div class="donation-content">
+                <h1>Donations</h1>
+                
+                <div class="form-and-qr">
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="amount">Enter Amount:</label>
+                            <input type="number" id="amount" name="amount" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message (Optional):</label>
+                            <textarea id="message" name="message" rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+
+                    <div class="qr-code">
+                        <img src="image/qr.jpg" alt="QR Code">
+                        <p>SCAN IT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red Background at Bottom -->
+    <div class="footer-space"></div>
+</body>
+</html>

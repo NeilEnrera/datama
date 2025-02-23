@@ -1,0 +1,468 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #BB2742;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar-container {
+    background-color: #8DBDE3;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(187, 39, 66, 0.1);
+    color: #BB2742;
+}
+
+.btn.active {
+    background-color: #BB2742;
+    color: white;
+    font-weight: 500;
+}
+
+/* Separator */
+.separator {
+    background-color: #BB2742;
+    height: 150px;
+}
+
+/* Adopt Section */
+.adopt-section {
+    background-color: #8DBDE3;
+    padding: 50px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Paw Container */
+.paw-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.paw {
+    width: 300px;
+    height: auto;
+    opacity: 0.4;
+    position: absolute;
+    filter: brightness(0.5) sepia(0.3) saturate(0.5);
+}
+
+/* Paw positions */
+.paw:nth-child(1) { top: 4%; right: 80%; width: 300px; }
+.paw:nth-child(2) { top: 4%; right: 55%; width: 300px; }
+.paw:nth-child(3) { top: 4%; right: 30%; width: 300px; }
+.paw:nth-child(4) { top: 4%; right: 5%; width: 300px; }
+.paw:nth-child(5) { bottom: 35%; right: 70%; width: 300px; }
+.paw:nth-child(6) { bottom: 35%; right: 40%; width: 300px; }
+.paw:nth-child(7) { bottom: 35%; right: 20%; width: 300px; }
+.paw:nth-child(8) { bottom: 35%; right: -10%; width: 300px; }
+.paw:nth-child(9) { bottom: 1%; right: 80%; width: 300px; }
+.paw:nth-child(10) { bottom: 1%; right: 55%; width: 300px; }
+.paw:nth-child(11) { bottom: 1%; right: 30%; width: 300px; }
+.paw:nth-child(12) { bottom: 1%; right: 7%; width: 300px; }
+.paw:nth-child(13) { bottom: 1%; right: -17%; width: 300px; }
+
+/* Adopt Container */
+.adopt-container {
+    width: 95%; /* Use percentage instead of fixed width */
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Categories Container */
+.categories-container {
+    background: #394598;
+    color: white;
+    padding: 25px;
+    height: 290px;
+    width: 350px;
+    border-radius: 70px;
+    border: 5px solid black;
+    flex-shrink: 0;
+    min-width: 280px; /* Minimum width */
+    max-width: 350px; /* Maximum width */
+    width: auto;
+    flex-shrink: 0;
+}
+
+.categories-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #BB2742;
+}
+
+.checkbox-item label {
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.checkbox-item:hover label {
+    color: #8DBDE3;
+}
+
+/* Pets Container */
+.pets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px)); /* Responsive columns */
+    gap: 20px;
+    justify-content: center;
+    padding: 15px;
+    flex: 1;
+}
+
+/* Category Section Styles */
+.category-section {
+    width: 100%;
+    margin-bottom: 30px; /* Increased margin between categories */
+}
+
+.category-header {
+    color: #394598;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.category-pets {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
+    justify-content: start;
+}
+
+/* Pet Card Styles */
+.pet-frame {
+    width: 300px;
+    height: 310px;
+    background: #394598;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+.pet-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pet-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Creates 4:3 aspect ratio */
+    overflow: hidden;
+}
+
+.pet-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.pet-frame:hover .pet-image-container img {
+    transform: scale(1.1);
+}
+
+.pet-info {
+    padding: 15px;
+    text-align: center;
+    color: black;
+    flex-grow: 1;
+    display: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pet-info h2 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: -5px;
+}
+
+.pet-description {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1400px) {
+    .adopt-container {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .pets-container,
+    .category-pets {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .adopt-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .categories-container {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .pets-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Add to body and html */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Popup Styles */
+.pet-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #394598;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 7px;
+    top: -5px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.pet-detail-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pet-detail-card .pet-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+}
+
+.pet-detail-card .pet-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    padding: 0;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.details-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.details-table td:first-child {
+    font-weight: bold;
+    width: 40%;
+}
+
+.adopt-btn {
+    background: #BB2742;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+    background: #8DBDE3;
+}
+
+/* Footer Space */
+.footer-space {
+    height: 100px;
+    background-color: #BB2742;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    .adopt-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories-container {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .pets-container {
+        padding: 20px 10px;
+    }
+
+    .paw {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: #8DBDE3;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .pet-frame {
+        width: 280px;
+    }
+
+    .paw {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .paw {
+        width: 100px;
+    }
+}
